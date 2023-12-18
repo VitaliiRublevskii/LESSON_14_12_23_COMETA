@@ -19,7 +19,7 @@ Point3D p2Com1 = new Point3D(4, 28, 10);
 Vector v1 = new Vector(p1Com1, p2Com1);
 Point3D vectorCom1 = v1.GetVector();
 
-CosmosObject Com1 = new Cometa(1, p1Com1, v1, 2000, mater, "COMET_707");
+CosmosObject Com1 = new Cometa(355, p1Com1, v1, 2000, mater, "COMET_707");
 
 Com1.PrintObject();
 Console.WriteLine();
@@ -80,20 +80,41 @@ if (keyInfo.Key == ConsoleKey.Enter)
 
 
 // Планета
-
+// Меркурий
 Point3D p1Planet1 = new Point3D(18, 201, 65);
 Point3D p2Planet1 = new Point3D(18, 250, 65);
 
 Vector v2 = new Vector(p1Planet1, p2Planet1);
-Materials FePl = new Ferum(22);
-Materials WPl = new Water(37);
-Materials SPl = new Stown(41);
+Materials FePl = new Ferum(62);
+Materials WPl = new Water(17);
+Materials SPl = new Stown(21);
 
 Materials[] materPl = { FePl, WPl, SPl };
 
-Core core1 = new Core(800, 11000);
+Core core1 = new Core(530, 3180);
 
-CosmosObject pl1 = new Planet(305, p1Planet1, v2, 1300, materPl, "Planet_Omega", core1);
+CosmosObject pl1 = new Planet(305, p1Planet1, v2, 172332, materPl, "Mercury", core1);
+
+pl1.PrintObject();
+Console.WriteLine();
+
+// Солнце
+Point3D p1Planet2 = new Point3D(1, 2, 1);
+Point3D p2Planet2 = new Point3D(1, 3, 1);
+
+Vector v3 = new Vector(p1Planet2, p2Planet2);
+Materials FeSun = new Ferum(92);
+Materials WPSun = new Water(0);
+Materials SSun = new Stown(8);
+
+Materials[] materSun = { FeSun, WPSun, SSun };
+
+Core core2 = new Core(15000000, 150000);
+
+CosmosObject plSun = new Planet(1, p1Planet2, v3, 781200, materSun, "Sun", core2);
+
+plSun.PrintObject();
+Console.WriteLine();
 
 
 

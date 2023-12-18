@@ -34,10 +34,9 @@ namespace LESSON_14_12_23_COMETA.Object
 
         public float GetSpeed() { return Speed; }
 
-        public virtual void PrintObject()
-        {
+        public virtual void PrintObject() { }
 
-        }
+        public virtual double FGravit(CosmosObject @object) { return 0; }
 
 
     }
